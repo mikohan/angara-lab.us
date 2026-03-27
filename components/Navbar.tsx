@@ -76,7 +76,7 @@ export function Navbar() {
         <Sheet>
           <SheetTrigger asChild>
             <Button variant="ghost" className="md:hidden">
-              <Menu className="h-8 w-8" />
+              <Menu className="h-6! w-6!" />
             </Button>
           </SheetTrigger>
 

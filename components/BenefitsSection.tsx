@@ -10,7 +10,6 @@ import {
   Plane,
   Handshake,
   Home,
-  Laptop,
   Globe,
   FileBarChart,
 } from "lucide-react"
