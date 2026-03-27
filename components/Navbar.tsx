@@ -10,7 +10,7 @@ import {
   NavigationMenuItem,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu"
-import { ThemeSwith } from "./theme-provider"
+import { ThemeSwitch } from "./theme-provider"
 import { Logo } from "./Logo"
 
 export function Navbar() {
@@ -28,7 +28,7 @@ export function Navbar() {
 
         {/* Desktop Menu */}
         <NavigationMenu className="hidden md:flex">
-          <NavigationMenuList className="flex gap-6">
+          <NavigationMenuList className="flex gap-5">
             <NavigationMenuItem>
               <Link
                 href="/about"
@@ -62,7 +62,7 @@ export function Navbar() {
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <ThemeSwith />
+              <ThemeSwitch />
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
@@ -74,7 +74,6 @@ export function Navbar() {
 
         {/* Mobile Menu */}
         <Sheet>
-          <ThemeSwith />
           <SheetTrigger asChild>
             <Button variant="ghost" className="md:hidden">
               <Menu className="h-8 w-8" />
@@ -82,7 +81,7 @@ export function Navbar() {
           </SheetTrigger>
 
           <SheetContent title="This is a menu" side="right" className="w-65">
-            <nav className="mt-6 ml-8 flex flex-col gap-4">
+            <nav className="mt-6 ml-8 flex max-w-[80%] flex-col gap-4">
               <Link href="/about" className="text-lg font-medium">
                 About
               </Link>
@@ -95,7 +94,7 @@ export function Navbar() {
               <Link href="/contact" className="text-lg font-medium">
                 Contact
               </Link>
-              <ThemeSwith />
+              <ThemeSwitch />
 
               <CtaButton />
             </nav>

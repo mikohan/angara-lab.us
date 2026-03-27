@@ -72,7 +72,7 @@ function ThemeHotkey() {
   return null
 }
 
-export function ThemeSwith() {
+export function ThemeSwitch() {
   const { resolvedTheme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
 
@@ -97,8 +97,8 @@ export function ThemeSwith() {
       size="icon"
       onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
     >
-      <Sun className="hower:rotate-90 h-6 w-6 scale-100 rotate-0 cursor-pointer transition-all dark:scale-0 dark:-rotate-90" />
-      <Moon className="absolute h-6 w-6 scale-0 rotate-90 cursor-pointer transition-all duration-200 hover:rotate-45 dark:scale-100 dark:rotate-0" />
+      <Sun className="hower:rotate-90 h-6! w-6! scale-100 rotate-0 cursor-pointer transition-all dark:scale-0 dark:-rotate-90" />
+      <Moon className="absolute h-6! w-6! scale-0 rotate-90 cursor-pointer transition-all duration-200 hover:rotate-45 dark:scale-100 dark:rotate-0" />
       <span className="sr-only">Toggle theme</span>
     </Button>
   )

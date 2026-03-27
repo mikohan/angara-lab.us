@@ -60,13 +60,13 @@ export default function HeroRu() {
             <div>
               <Image
                 className=""
-                width={20}
-                height={20}
+                width={32}
+                height={32}
                 src={MarketShareIcon}
                 alt="Market Share"
               />
             </div>
-            <p className="font-base text-sm">$842 Billion Market in USA</p>
+            <p className="font-base">$842 Billion Market in USA</p>
           </div>
           {/* header and subheader box */}
           <div className="mt-4 flex flex-col gap-8">
