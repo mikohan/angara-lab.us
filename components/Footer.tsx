@@ -11,17 +11,17 @@ export function Footer() {
       <div className="absolute -top-1 left-0 -z-10 h-8 w-full bg-blur-bg-3/60 blur-3xl"></div>
       <div className="mx-auto flex flex-col items-center justify-center gap-6 px-4 md:flex-row md:justify-between md:px-32">
         <Logo />
-        <nav className="flex flex-col gap-8 text-footer-text md:flex-row">
+        <nav className="flex flex-col gap-8 text-footer-text md:flex-row md:items-center md:justify-center">
           <Link
             target="_blank"
-            className="mt-4 flex items-center gap-2"
+            className="flex items-center gap-2"
             href="mailto:manheeusa@gmail.com"
           >
             <Image
               height={32}
               width={32}
               src={AtNegativeIcon}
-              alt="Social icon telegram"
+              alt="Social icon Email"
             />
             manheeusa@gmail.com
           </Link>

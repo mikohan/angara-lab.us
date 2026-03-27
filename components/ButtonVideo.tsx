@@ -5,17 +5,18 @@ export function ButtonVideo() {
   return (
     <div className="btn-animation inline-flex cursor-pointer items-center gap-2">
       <button
-        className="item-center btn-animation flex h-12 w-12 cursor-pointer justify-center rounded-full shadow-lg outline outline-btn-color"
+        className="flex h-12 w-12 items-center justify-center rounded-full shadow-lg outline outline-btn-color"
         title="Watch video button"
       >
         <Image
-          className="text-white"
           src={VideoIcon}
           alt="Button to play video"
-          height={12}
           width={12}
+          height={12}
+          className="block text-white"
         />
       </button>
+
       <p className="text-sm md:text-base">Watch Video</p>
     </div>
   )
