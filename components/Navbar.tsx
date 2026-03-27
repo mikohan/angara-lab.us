@@ -74,14 +74,15 @@ export function Navbar() {
 
         {/* Mobile Menu */}
         <Sheet>
+          <ThemeSwith />
           <SheetTrigger asChild>
             <Button variant="ghost" className="md:hidden">
-              <Menu className="h-6 w-6" />
+              <Menu className="h-8 w-8" />
             </Button>
           </SheetTrigger>
 
           <SheetContent title="This is a menu" side="right" className="w-65">
-            <nav className="mt-6 flex flex-col gap-4">
+            <nav className="mt-6 ml-8 flex flex-col gap-4">
               <Link href="/about" className="text-lg font-medium">
                 About
               </Link>

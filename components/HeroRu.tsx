@@ -69,7 +69,7 @@ export default function HeroRu() {
             <p className="font-base text-sm">$842 Billion Market in USA</p>
           </div>
           {/* header and subheader box */}
-          <div className="mt-4 flex flex-col gap-4">
+          <div className="mt-4 flex flex-col gap-8">
             {/* box for h1 circler function */}
             <div>
               <HeaderCircler id={data.headline.id} data={headlines} />
@@ -80,7 +80,7 @@ export default function HeroRu() {
             </p>
           </div>
           {/* Buttons box */}
-          <div className="mt-8 flex flex-row items-center gap-8 md:mt-44">
+          <div className="mt-16 flex flex-row items-center gap-8 md:mt-44">
             {/* button itself */}
             <HeroButton />
             {/* video button with text box */}
@@ -88,7 +88,7 @@ export default function HeroRu() {
           </div>
         </div>
         {/* Image left and bottom on mobile */}
-        <div className="relative mt-8 flex h-75 justify-end md:mt-20 md:h-125 md:w-[40%]">
+        <div className="relative mt-16 flex h-75 justify-end md:mt-20 md:h-125 md:w-[40%]">
           {/* <div className="anim-pulse absolute top-0 left-0 -z-10 h-full w-full rounded-full bg-[radial-gradient(circle_at_center,var(--blur-bg-1),var(--blur-bg-2),var(--blur-bg-4))] opacity-60 blur-[120px]"></div> */}
           <Image
             className="rounded-2xl object-cover object-right"

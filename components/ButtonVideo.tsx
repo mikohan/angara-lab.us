@@ -5,7 +5,7 @@ export function ButtonVideo() {
   return (
     <div className="btn-animation inline-flex cursor-pointer items-center gap-2">
       <button
-        className="item-center btn-animation flex h-10 w-10 cursor-pointer justify-center rounded-full shadow-lg outline outline-btn-color md:h-12 md:w-12"
+        className="item-center btn-animation flex h-12 w-12 cursor-pointer justify-center rounded-full shadow-lg outline outline-btn-color"
         title="Watch video button"
       >
         <Image
