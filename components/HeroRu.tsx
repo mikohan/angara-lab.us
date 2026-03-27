@@ -74,7 +74,7 @@ export default function HeroRu() {
             <div>
               <HeaderCircler id={data.headline.id} data={headlines} />
             </div>
-            <p className="font-roboto tracking-tight">
+            <p className="tracking-tight">
               Ищу профессионалов в <b>команду</b> маркетинга для
               массштабирования бизнеса в <b>США</b> с $200k до $10M.
             </p>

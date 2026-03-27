@@ -27,7 +27,7 @@ export function HeaderCircler({
 
   return (
     <RoughNotationGroup show={true}>
-      <h1 className="font-roboto text-3xl leading-normal font-bold tracking-normal text-foreground md:text-5xl">
+      <h1 className="text-3xl leading-normal font-bold tracking-normal text-foreground md:text-5xl">
         {item.text.split(" ").map((word, index) => {
           const isTarget = word
             .toLowerCase()

@@ -7,9 +7,9 @@ import { PerksBar } from "@/components/PerksBar"
 
 export default function Page() {
   return (
-    <div>
+    <div className="pb-16">
       <Navbar />
-      <div className="container mx-auto mb-32 max-w-7xl px-8 pb-16">
+      <div className="container mx-auto mb-32 max-w-7xl px-8">
         <div className="mt-2 md:mt-8">
           <HeroRu />
         </div>
