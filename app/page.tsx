@@ -1,5 +1,6 @@
 import { AboutSectionTwo } from "@/components/AboutSectionTwo"
 import { BenefitsSection } from "@/components/BenefitsSection"
+import { CallToAction } from "@/components/CallToAction"
 import { Footer } from "@/components/Footer"
 import HeroRu from "@/components/HeroRu"
 import { Navbar } from "@/components/Navbar"
@@ -26,6 +27,9 @@ export default function Page() {
         </div>
         <div className="mt-16 md:mt-32">
           <WhoINeed />
+        </div>
+        <div className="mt-16 md:mt-32">
+          <CallToAction />
         </div>
       </div>
       <Footer />
