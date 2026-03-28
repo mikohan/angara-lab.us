@@ -5,6 +5,7 @@ import SamDark from "@/public/images/company/sam-dark.jpg"
 import { useTheme } from "next-themes"
 import { useEffect, useState } from "react"
 import { CtaButton } from "./CtaButton"
+import TelegramIcon from "@/public/images/company/telegram-negative.png"
 
 export function CallToAction() {
   const { theme, resolvedTheme } = useTheme()
@@ -18,12 +19,11 @@ export function CallToAction() {
   return (
     <div className="justfy-center flex flex-col items-center">
       <h2 className="heading-h2 text-center">
-        Готовы строить систему, а не просто «закрывать задачи»?
+        Вы готовы строить архитектуру бизнеса, а не просто «закрывать задачи»?
       </h2>
       <p className="mt-4 w-full max-w-[80%] text-center font-bold text-subheader">
-        Я ищу одного-двух человек, которые станут фундаментом Angara Lab. Если
-        вы понимаете, что за небольшим стартом в реальном бизнесе в США стоит
-        огромный потенциал роста в твердой валюте — нам по пути.
+        Мы начинаем с конкретных задач в реальном секторе бизнеса США, но цель —
+        создание масштабной, автономной системы с кратным ростом.
       </p>
       <div className="mt-16 md:flex md:gap-8">
         <div className="mt-12 flex flex-col gap-4 font-light md:mt-0 md:max-w-[60%] md:gap-8 md:px-16">
@@ -33,7 +33,27 @@ export function CallToAction() {
             руками и какой минимальный фикс вам нужен сейчас, чтобы нормально
             жить и работать.
           </p>
-          <CtaButton />
+          <h3 className="heading-h3">Что дальше:</h3>
+          <p>
+            Если вы видите потенциал в долгосрочном партнерстве — пишите в
+            телеграм {process.env.NEXT_PUBLIC_TELEGRAM}.
+          </p>
+          <p>
+            Кратко: ваш опыт, ключевые компетенции «руками» и комфортный для вас
+            стартовый фикс, который позволит полностью сфокусироваться на
+            проекте. Отправляйте резюме и портфолио.
+          </p>
+          <div className="my-16 flex w-full justify-center">
+            <button className="flex w-60 items-center justify-center gap-4 rounded-full bg-btn-color px-8 py-2">
+              <Image
+                src={TelegramIcon}
+                alt="Call me icon"
+                height={32}
+                width={32}
+              />
+              Contact Me
+            </button>
+          </div>
         </div>
         <div className="relative w-full">
           <Image

@@ -41,7 +41,7 @@ export function AboutSectionTwo() {
           <p>
             Сейчас мы находимся на этапе перехода от стартапа к бизнесу. Уже
             зарабатываем деньги на высококонкурентном рынке. Сейчас выручка
-            $200K, нужно вырасти до $10M.
+            $200K, нужно выйти на федеральный уровень и массштабировать до $10M.
           </p>
           <p>
             На этих проектах я хочу создать маркетинговую команду Angara Lab —
@@ -61,18 +61,10 @@ export function AboutSectionTwo() {
           <p>
             Мне нужны архитекторы систем. Люди, которые умеют строить
             инфраструктуру, считать юнит-экономику и
-            <RoughNotation
-              show
-              type="circle"
-              animate
-              animationDuration={600}
-              color="var(--blur-bg-1)"
-              padding={4}
-              strokeWidth={2}
-              iterations={1}
-            >
-              <span>отвечать за результат.</span>
-            </RoughNotation>
+            <span className="font-semibold text-destructive">
+              {" "}
+              отвечать за результат.
+            </span>
           </p>
         </div>
       </div>

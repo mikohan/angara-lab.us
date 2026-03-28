@@ -28,9 +28,7 @@ export function BenefitsSection() {
   return (
     <div className="justfy-center flex flex-col items-center">
       <div className="relative flex w-full flex-col items-center">
-        <h2 className="relative text-center text-2xl font-bold md:max-w-[60%]">
-          Возможные бенефиты.
-        </h2>
+        <h2 className="heading-h2 relative text-center">Бенефиты.</h2>
         <p className="mt-4 w-full text-center font-bold text-subheader">
           Несколько бенефитов, которые Вы можете получить при успешном
           сотрудничестве.

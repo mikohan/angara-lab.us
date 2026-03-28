@@ -1,16 +1,14 @@
 import { AboutSectionTwo } from "@/components/AboutSectionTwo"
 import { BenefitsSection } from "@/components/BenefitsSection"
 import { CallToAction } from "@/components/CallToAction"
-import { Footer } from "@/components/Footer"
 import HeroRu from "@/components/HeroRu"
-import { Navbar } from "@/components/Navbar"
 import { PerksBar } from "@/components/PerksBar"
 import { WhoINeed } from "@/components/WhoINeed"
+import PageAnimate from "@/components/PageAnimation"
 
 export default function Page() {
   return (
-    <div className="">
-      <Navbar />
+    <PageAnimate>
       <div className="container mx-auto mb-32 max-w-7xl px-8">
         <div className="mt-2 md:mt-8">
           <HeroRu />
@@ -32,7 +30,6 @@ export default function Page() {
           <CallToAction />
         </div>
       </div>
-      <Footer />
-    </div>
+    </PageAnimate>
   )
 }

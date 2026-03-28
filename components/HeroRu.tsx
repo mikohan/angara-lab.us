@@ -5,61 +5,19 @@ import { HeroButton } from "./HeroButton"
 import { ButtonVideo } from "./ButtonVideo"
 import HeroImageDark from "@/public/images/company/hero-dark.png"
 import HeroImageLight from "@/public/images/company/hero-light.png"
-import { useTheme } from "next-themes"
-import { useEffect, useState, useMemo } from "react"
-import { headlines } from "@/app/data/hero-text"
-import { HeaderCircler } from "@/components/HeaderCircler"
-type currentHeadlineType = {
-  id: number
-  text: string
-  target: string
-}
 
 export default function HeroRu() {
-  const { theme, resolvedTheme } = useTheme()
-  // const [mounted, setMounted] = useState(false)
-  // const [headline, setHeadline] = useState<string>("")
-  const [data, setData] = useState<{
-    mounted: boolean
-    headline: currentHeadlineType | null
-    index: number | string
-  }>({
-    mounted: false,
-    headline: null,
-    index: 0,
-  })
-
-  useEffect(() => {
-    const savedIndex = localStorage.getItem("headline_index")
-    const currentIndex = savedIndex ? parseInt(savedIndex, 10) : 0
-    const currentHeadline = headlines[currentIndex]
-    const nextIndex = (currentIndex + 1) % headlines.length
-    localStorage.setItem("headline_index", nextIndex.toString())
-
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    setData({
-      mounted: true,
-      headline: currentHeadline,
-      index: currentIndex,
-    })
-  }, [])
-
-  // if (!mounted) return null // Prevent hydration mismatch
-  if (!data.mounted || !data.headline) return null
-  const HeroImage = resolvedTheme == "light" ? HeroImageLight : HeroImageDark
-
   const show_video = process.env.NEXT_PUBLIC_VIDEO_ENABLED === "true"
   return (
     <section className="w-full">
       {/* Box for left side and image */}
-      <div className="w-full md:flex">
+      <div className="w-full md:flex md:items-start">
         {/* Container for all left text and buttons */}
         <div className="flex flex-col md:w-[60%] md:justify-center md:pr-16">
           {/* box for market size */}
           <div className="mt-4 inline-flex items-center gap-2 md:mt-0">
             <div>
               <Image
-                className=""
                 width={32}
                 height={32}
                 src={MarketShareIcon}
@@ -72,7 +30,12 @@ export default function HeroRu() {
           <div className="mt-4 flex flex-col gap-8">
             {/* box for h1 circler function */}
             <div>
-              <HeaderCircler id={data.headline.id} data={headlines} />
+              {/* <HeaderCircler id={data.headline.id} data={headlines} /> */}
+            </div>
+            <div className="min-h-30 leading-normal md:min-h-40">
+              <h1 className="text-3xl leading-normal font-bold tracking-normal text-foreground md:text-5xl">
+                Нужен системный Performance Маркетолог для рынка США.
+              </h1>
             </div>
             <p className="tracking-tight">
               Ищу профессионалов в <b>команду</b> маркетинга для
@@ -88,13 +51,22 @@ export default function HeroRu() {
           </div>
         </div>
         {/* Image left and bottom on mobile */}
-        <div className="relative mt-16 flex h-75 justify-end md:mt-20 md:h-125 md:w-[40%]">
-          {/* <div className="anim-pulse absolute top-0 left-0 -z-10 h-full w-full rounded-full bg-[radial-gradient(circle_at_center,var(--blur-bg-1),var(--blur-bg-2),var(--blur-bg-4))] opacity-60 blur-[120px]"></div> */}
+        <div className="relative mt-16 aspect-4/5 w-full md:mt-20 md:w-[40%]">
           <Image
-            className="rounded-2xl object-cover object-right"
-            src={HeroImage}
+            className="hidden rounded-2xl object-cover dark:block"
+            src={HeroImageDark}
             fill
             alt="Hero image"
+            priority
+            placeholder="blur"
+          />
+          <Image
+            className="block rounded-2xl object-cover dark:hidden"
+            src={HeroImageLight}
+            fill
+            alt="Hero image"
+            priority
+            placeholder="blur"
           />
         </div>
       </div>

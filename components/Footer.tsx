@@ -13,6 +13,7 @@ export function Footer() {
         <Logo />
         <nav className="flex flex-col gap-8 text-footer-text md:flex-row md:items-center md:justify-center">
           <Link
+            scroll={false}
             target="_blank"
             className="flex items-center gap-2"
             href="mailto:manheeusa@gmail.com"
@@ -26,6 +27,7 @@ export function Footer() {
             manheeusa@gmail.com
           </Link>
           <Link
+            scroll={false}
             href="https://t.me/manheeusa"
             target="_blank"
             className="flex items-center gap-2"
@@ -39,6 +41,7 @@ export function Footer() {
             @manheeusa
           </Link>
           <Link
+            scroll={false}
             href="https://wa.me/19512244109"
             target="_blank"
             className="flex items-center gap-2"

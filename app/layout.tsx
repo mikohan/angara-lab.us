@@ -5,6 +5,8 @@ import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { cn } from "@/lib/utils"
 import ScrollToTop from "@/components/ScrollToTop"
+import { Footer } from "@/components/Footer"
+import { Navbar } from "@/components/Navbar"
 
 export default function RootLayout({
   children,
@@ -24,7 +26,11 @@ export default function RootLayout({
     >
       <body>
         <LenisProvider>
-          <ThemeProvider>{children}</ThemeProvider>
+          <ThemeProvider>
+            <Navbar />
+            {children}
+            <Footer />
+          </ThemeProvider>
           <ScrollToTop />
         </LenisProvider>
       </body>

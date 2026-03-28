@@ -5,50 +5,18 @@ import { HeroButton } from "./HeroButton"
 import { ButtonVideo } from "./ButtonVideo"
 import HeroImageDark from "@/public/images/company/hero-dark.png"
 import HeroImageLight from "@/public/images/company/hero-light.png"
-import { useTheme } from "next-themes"
-import { useEffect, useState } from "react"
-import { headlines } from "@/app/data/hero-text"
 import { RoughNotation, RoughNotationGroup } from "react-rough-notation"
-type currentHeadlineType = {
-  id: number
-  text: string
-  target: string
-}
+import { useEffect, useState } from "react"
 
 export function HeroRuTwo() {
-  const { theme, resolvedTheme } = useTheme()
-  // const [mounted, setMounted] = useState(false)
-  // const [headline, setHeadline] = useState<string>("")
-  const [data, setData] = useState<{
-    mounted: boolean
-    headline: currentHeadlineType | null
-    index: number | string
-  }>({
-    mounted: false,
-    headline: null,
-    index: 0,
-  })
+  const show_video = process.env.NEXT_PUBLIC_VIDEO_ENABLED === "true"
+  const [show, setShow] = useState(false)
 
   useEffect(() => {
-    const savedIndex = localStorage.getItem("headline_index")
-    const currentIndex = savedIndex ? parseInt(savedIndex, 10) : 0
-    const currentHeadline = headlines[currentIndex]
-    const nextIndex = (currentIndex + 1) % headlines.length
-    localStorage.setItem("headline_index", nextIndex.toString())
-
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    setData({
-      mounted: true,
-      headline: currentHeadline,
-      index: currentIndex,
-    })
+    // Delay slightly to ensure layout has settled
+    const timer = setTimeout(() => setShow(true), 500)
+    return () => clearTimeout(timer)
   }, [])
-
-  // if (!mounted) return null // Prevent hydration mismatch
-  if (!data.mounted || !data.headline) return null
-  const HeroImage = resolvedTheme == "light" ? HeroImageLight : HeroImageDark
-
-  const show_video = process.env.NEXT_PUBLIC_VIDEO_ENABLED === "true"
   return (
     <section className="w-full">
       {/* Box for left side and image */}
@@ -72,7 +40,7 @@ export function HeroRuTwo() {
           <div className="mt-4 flex flex-col gap-8">
             {/* box for h1 circler function */}
             <div>
-              <RoughNotationGroup show={true}>
+              <RoughNotationGroup show={show}>
                 <h1 className="text-3xl leading-normal font-bold tracking-normal text-foreground md:text-5xl">
                   Нужен системный
                   <RoughNotation
@@ -120,11 +88,16 @@ export function HeroRuTwo() {
           </div>
         </div>
         {/* Image left and bottom on mobile */}
-        <div className="relative mt-16 flex h-75 justify-end md:mt-20 md:h-125 md:w-[40%]">
-          {/* <div className="anim-pulse absolute top-0 left-0 -z-10 h-full w-full rounded-full bg-[radial-gradient(circle_at_center,var(--blur-bg-1),var(--blur-bg-2),var(--blur-bg-4))] opacity-60 blur-[120px]"></div> */}
+        <div className="relative mt-16 aspect-4/5 md:mt-20 md:h-150 md:max-h-175 md:w-[40%]">
           <Image
-            className="rounded-2xl object-cover object-right"
-            src={HeroImage}
+            className="block rounded-2xl object-cover object-right dark:hidden"
+            src={HeroImageLight}
+            fill
+            alt="Hero image"
+          />
+          <Image
+            className="hidden rounded-2xl object-cover object-right dark:block"
+            src={HeroImageDark}
             fill
             alt="Hero image"
           />
