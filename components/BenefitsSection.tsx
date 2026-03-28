@@ -37,7 +37,7 @@ export function BenefitsSection() {
         </p>
         <div className="absolute top-0 left-0 -z-20 h-20 w-full bg-top-blur blur-2xl"></div>
       </div>
-      <div className="mt-8 md:mt-32 md:flex md:gap-8">
+      <div className="mt-8 md:mt-32 md:flex md:justify-between md:gap-8">
         <ul className="mt-4 flex list-none flex-col gap-8 font-light md:mt-0 md:px-16">
           <li className="flex items-center gap-4">
             <div>
@@ -79,7 +79,7 @@ export function BenefitsSection() {
             <div>
               <FileBarChart />
             </div>
-            <div>Реальные кейсы / международная карьера</div>
+            <div>Американские кейсы в портфолио</div>
           </li>
         </ul>
         <div className="relative mt-16 w-full md:mt-0 md:max-w-[40%]">

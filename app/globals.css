@@ -153,7 +153,7 @@
   --blur-bg-3: oklch(0.641 0.187 258.118);
   --blur-bg-4: oklch(0.505 0.291 284.159);
   /* --subheader: oklch(0.858 0.07 259.597 / 0.8); */
-  --subheader: oklch(0.556 0 0);
+  --subheader: oklch(0.858 0.07 259.597 / 0.7);
 }
 @layer base {
   * {
@@ -177,5 +177,8 @@
   }
   .heading-h3 {
     @apply text-xl font-semibold md:max-w-[80%];
+  }
+  .nav-animation-underline {
+    @apply relative font-medium after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-subheader after:transition-all after:duration-300 hover:text-subheader hover:after:w-full;
   }
 }

@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image"
-import MyPhotoLight from "@/public/images/company/me-light.jpg"
-import MyPhotoDark from "@/public/images/company/me-dark.jpg"
+import SamLight from "@/public/images/company/sam-light.jpg"
+import SamDark from "@/public/images/company/sam-dark.jpg"
 import { useTheme } from "next-themes"
 import { useEffect, useState } from "react"
 import { CtaButton } from "./CtaButton"
@@ -14,7 +14,7 @@ export function CallToAction() {
     setMounted(true)
   }, [])
   if (!mounted) return null
-  const MyPhoto = resolvedTheme == "light" ? MyPhotoLight : MyPhotoDark
+  const MyPhoto = resolvedTheme == "light" ? SamLight : SamDark
   return (
     <div className="justfy-center flex flex-col items-center">
       <h2 className="heading-h2 text-center">
@@ -29,18 +29,10 @@ export function CallToAction() {
         <div className="mt-12 flex flex-col gap-4 font-light md:mt-0 md:max-w-[60%] md:gap-8 md:px-16">
           <h3 className="heading-h3">Что делать сейчас:</h3>
           <p>
-            Напишите мне в Telegram: @manheeusa В первом сообщении не присылайте
-            стандартное резюме на 5 страниц. Коротко ответьте на 3 вопроса:
-            Какую самую сложную систему маркетинга или аналитики вы собрали
-            руками? Какие конкретные цифры (ROI, стоимость лида, конверсия) вы
-            контролировали? Какой минимальный фикс в месяц вам необходим на
-            старте, чтобы вы могли полностью сфокусироваться на проекте?
+            Если интересно — пишите: @manheeusa. Коротко: что умеете делать
+            руками и какой минимальный фикс вам нужен сейчас, чтобы нормально
+            жить и работать.
           </p>
-          <h3 className="heading-h3">
-            Предупреждаю сразу: я отвечу не всем. Если ваш опыт и подход
-            совпадут с моим видением — назначим первый короткий
-            созвон-знакомство.
-          </h3>
           <CtaButton />
         </div>
         <div className="relative w-full">

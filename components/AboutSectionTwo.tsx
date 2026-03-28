@@ -4,6 +4,7 @@ import MyPhotoLight from "@/public/images/company/me-light.jpg"
 import MyPhotoDark from "@/public/images/company/me-dark.jpg"
 import { useTheme } from "next-themes"
 import { useEffect, useState } from "react"
+import { RoughNotation } from "react-rough-notation"
 
 export function AboutSectionTwo() {
   const { theme, resolvedTheme } = useTheme()
@@ -22,7 +23,7 @@ export function AboutSectionTwo() {
       <p className="mt-4 w-full text-center font-bold text-subheader">
         Я собираю сильную комнду для массштабирования бизнеса в США.
       </p>
-      <div className="mt-16 md:flex md:gap-8">
+      <div className="mt-16 md:flex md:justify-between md:gap-8">
         <div className="relative w-full">
           <Image
             className="rounded-2xl object-cover"
@@ -32,9 +33,9 @@ export function AboutSectionTwo() {
         </div>
         <div className="mt-12 flex flex-col gap-4 font-light md:mt-0 md:gap-8 md:px-16">
           <p>
-            Привет. Я Влад, развиваю в США две компании в сфере
+            Привет. Я Владимир, развиваю в США две компании в сфере
             профессионального клининга (уборка и химчистка мебели). Это
-            понятный, приземленный бизнес с реальной базой клиентов в
+            классический вороночный бизнес с реальной базой клиентов в
             Калифорнии.
           </p>
           <p>
@@ -43,12 +44,13 @@ export function AboutSectionTwo() {
             $200K, нужно вырасти до $10M.
           </p>
           <p>
-            Идея создать маркетинговую команду Angara Lab — научиться, построить
-            систему и далее развивать бизнесы разной направленности в США на
-            федеральном уровне.
+            На этих проектах я хочу создать маркетинговую команду Angara Lab —
+            научиться, построить систему и далее развивать бизнесы разной
+            направленности в США на федеральном уровне.
           </p>
           <p>
-            Я вижу гигантские перспективы для личного роста и развития бизнеса.
+            У нас есть гигантские перспективы для личного роста и развития
+            бизнеса.
           </p>
           <p>
             В чем проблема: У меня есть заказы и поток клиентов, но мне не
@@ -57,13 +59,20 @@ export function AboutSectionTwo() {
             рекламу».
           </p>
           <p>
-            Кого я ищу: Мне не нужны «руки», которые ждут ТЗ. Мне нужны
-            архитекторы систем. Люди, которые умеют строить инфраструктуру,
-            считать юнит-экономику и отвечать за результат, а не за «процесс».
-          </p>
-          <p>
-            Предлагаю присоединиться к команде. Будем вместе зарабатывать в США,
-            на рынке где есть деньги и возможность вырасти на весь мир.
+            Мне нужны архитекторы систем. Люди, которые умеют строить
+            инфраструктуру, считать юнит-экономику и
+            <RoughNotation
+              show
+              type="circle"
+              animate
+              animationDuration={600}
+              color="var(--blur-bg-1)"
+              padding={4}
+              strokeWidth={2}
+              iterations={1}
+            >
+              <span>отвечать за результат.</span>
+            </RoughNotation>
           </p>
         </div>
       </div>
