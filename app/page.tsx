@@ -1,4 +1,4 @@
-import { AboutSection } from "@/components/AboutSection"
+import { AboutSectionTwo } from "@/components/AboutSectionTwo"
 import { BenefitsSection } from "@/components/BenefitsSection"
 import { Footer } from "@/components/Footer"
 import HeroRu from "@/components/HeroRu"
@@ -18,7 +18,7 @@ export default function Page() {
         </div>
         {/* Section about-start */}
         <div className="mt-16 md:mt-32">
-          <AboutSection />
+          <AboutSectionTwo />
         </div>
         <div className="mt-16 md:mt-32">
           <BenefitsSection />

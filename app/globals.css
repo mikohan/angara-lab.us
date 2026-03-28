@@ -159,7 +159,7 @@
   * {
     @apply border-border outline-ring/50;
     .btn-animation {
-      @apply transition-all duration-300 ease-in-out hover:scale-105 hover:text-muted-foreground hover:outline-muted-foreground;
+      @apply transition-all duration-300 ease-in-out hover:scale-105 hover:text-muted-foreground hover:outline-muted-foreground active:scale-110 active:opacity-70;
     }
     .perks-ticker-image {
       @apply h-16 w-auto md:h-20;
@@ -170,5 +170,9 @@
   }
   html {
     @apply font-sans;
+  }
+
+  .heading-h2 {
+    @apply text-2xl font-bold md:max-w-[60%];
   }
 }
