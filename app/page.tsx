@@ -4,6 +4,7 @@ import { Footer } from "@/components/Footer"
 import HeroRu from "@/components/HeroRu"
 import { Navbar } from "@/components/Navbar"
 import { PerksBar } from "@/components/PerksBar"
+import { WhoINeed } from "@/components/WhoINeed"
 
 export default function Page() {
   return (
@@ -22,6 +23,9 @@ export default function Page() {
         </div>
         <div className="mt-16 md:mt-32">
           <BenefitsSection />
+        </div>
+        <div className="mt-16 md:mt-32">
+          <WhoINeed />
         </div>
       </div>
       <Footer />

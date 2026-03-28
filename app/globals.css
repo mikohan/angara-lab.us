@@ -175,4 +175,7 @@
   .heading-h2 {
     @apply text-2xl font-bold md:max-w-[60%];
   }
+  .heading-h3 {
+    @apply text-xl font-semibold md:max-w-[80%];
+  }
 }

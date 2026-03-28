@@ -29,10 +29,11 @@ export function BenefitsSection() {
     <div className="justfy-center flex flex-col items-center">
       <div className="relative flex w-full flex-col items-center">
         <h2 className="relative text-center text-2xl font-bold md:max-w-[60%]">
-          Почему нужно серьезно рассматривать предложение.
+          Возможные бенефиты.
         </h2>
         <p className="mt-4 w-full text-center font-bold text-subheader">
-          Несколько бенефитов, которые Вы получите при успешном сотрудничестве.
+          Несколько бенефитов, которые Вы можете получить при успешном
+          сотрудничестве.
         </p>
         <div className="absolute top-0 left-0 -z-20 h-20 w-full bg-top-blur blur-2xl"></div>
       </div>
