@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     siteName: "Angara Lab Careers",
     images: [
       {
-        url: `${process.env.NEXT_PUBLIC_WEBSITE}/og-image.jpg`,
+        url: `${process.env.NEXT_PUBLIC_WEBSITE}/images/company/me-dark.jpg`,
         width: 1200,
         height: 630,
         alt: "Angara Lab — Marketing Team Hiring",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     title: "Join Angara Lab — Build a Marketing System for a $10M Vision",
     description:
       "We’re hiring ambitious marketers, designers, and creators who want to grow with a real US‑based business.",
-    images: [`${process.env.NEXT_PUBLIC_WEBSITE}/og-image.jpg`],
+    images: [`${process.env.NEXT_PUBLIC_WEBSITE}/images/company/me-dark.jpg`],
   },
 }
 
