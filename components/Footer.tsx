@@ -28,7 +28,7 @@ export function Footer() {
           </Link>
           <Link
             scroll={false}
-            href="https://t.me/manheeusa"
+            href="https://t.me/mishabelkin1"
             target="_blank"
             className="flex items-center gap-2"
           >
@@ -38,7 +38,7 @@ export function Footer() {
               src={TelegramNegative}
               alt="Social icon telegram"
             />
-            @manheeusa
+            {process.env.NEXT_PUBLIC_TELEGRAM}
           </Link>
           <Link
             scroll={false}

@@ -29,9 +29,9 @@ export function CallToAction() {
         <div className="mt-12 flex flex-col gap-4 font-light md:mt-0 md:max-w-[60%] md:gap-8 md:px-16">
           <h3 className="heading-h3">Что делать сейчас:</h3>
           <p>
-            Если интересно — пишите: @manheeusa. Коротко: что умеете делать
-            руками и какой минимальный фикс вам нужен сейчас, чтобы нормально
-            жить и работать.
+            Если интересно — пишите: {process.env.NEXT_PUBLIC_TELEGRAM}.
+            Коротко: что умеете делать руками и какой минимальный фикс вам нужен
+            сейчас, чтобы нормально жить и работать.
           </p>
           <h3 className="heading-h3">Что дальше:</h3>
           <p>
