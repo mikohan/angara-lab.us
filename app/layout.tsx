@@ -9,6 +9,10 @@ import ScrollToTop from "@/components/ScrollToTop"
 import { Footer } from "@/components/Footer"
 import { Navbar } from "@/components/Navbar"
 
+const ogUrl =
+  process.env.NEXT_PUBLIC_WEBSITE + "/images/company/hero-dark.jpg" ||
+  "https://angara-lab.us/images/company/hero-dark.jpg"
+
 export const metadata: Metadata = {
   title: "Join Angara Lab — Build a Marketing System for a $10M Vision",
   description:
@@ -21,7 +25,7 @@ export const metadata: Metadata = {
     siteName: "Angara Lab Careers",
     images: [
       {
-        url: `${process.env.NEXT_PUBLIC_WEBSITE}/images/company/me-dark.jpg`,
+        url: ogUrl,
         width: 1200,
         height: 630,
         alt: "Angara Lab — Marketing Team Hiring",
@@ -35,7 +39,7 @@ export const metadata: Metadata = {
     title: "Join Angara Lab — Build a Marketing System for a $10M Vision",
     description:
       "We’re hiring ambitious marketers, designers, and creators who want to grow with a real US‑based business.",
-    images: [`${process.env.NEXT_PUBLIC_WEBSITE}/images/company/me-dark.jpg`],
+    images: [ogUrl],
   },
 }
 
