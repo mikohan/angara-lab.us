@@ -10,8 +10,8 @@ import { Footer } from "@/components/Footer"
 import { Navbar } from "@/components/Navbar"
 
 const ogUrl =
-  process.env.NEXT_PUBLIC_WEBSITE + "/images/company/hero-dark.jpg" ||
-  "https://angara-lab.us/images/company/hero-dark.jpg"
+  process.env.NEXT_PUBLIC_WEBSITE + "/images/company/hero-dark.png" ||
+  "https://angara-lab.us/images/company/hero-dark.png"
 
 export const metadata: Metadata = {
   title: "Join Angara Lab — Build a Marketing System for a $10M Vision",
