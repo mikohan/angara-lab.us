@@ -17,7 +17,7 @@ export function CallToAction() {
   if (!mounted) return null
   const MyPhoto = resolvedTheme == "light" ? SamLight : SamDark
   return (
-    <div className="justfy-center flex flex-col items-center">
+    <div id="contacts" className="justfy-center flex flex-col items-center">
       <h2 className="heading-h2 text-center">
         Вы готовы строить архитектуру бизнеса, а не просто «закрывать задачи»?
       </h2>

@@ -4,7 +4,6 @@ import MyPhotoLight from "@/public/images/company/me-light.jpg"
 import MyPhotoDark from "@/public/images/company/me-dark.jpg"
 import { useTheme } from "next-themes"
 import { useEffect, useState } from "react"
-import { RoughNotation } from "react-rough-notation"
 
 export function AboutSectionTwo() {
   const { theme, resolvedTheme } = useTheme()
@@ -16,7 +15,7 @@ export function AboutSectionTwo() {
   if (!mounted) return null
   const MyPhoto = resolvedTheme == "light" ? MyPhotoLight : MyPhotoDark
   return (
-    <div className="justfy-center flex flex-col items-center">
+    <div id="about" className="justfy-center flex flex-col items-center">
       <h2 className="heading-h2 text-center">
         Приветстую, меня зовут Владимир.
       </h2>

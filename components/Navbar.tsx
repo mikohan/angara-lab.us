@@ -1,10 +1,15 @@
 "use client"
-
-import Link from "next/link"
+import { useSmoothScroll } from "@/lib/useSmoothScroll"
 import { Menu } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { CtaButton } from "./CtaButton"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+  SheetHeader,
+  SheetTitle,
+} from "@/components/ui/sheet"
 
 import {
   NavigationMenu,
@@ -20,6 +25,7 @@ const getClientSnaphost = () => true
 const getServerSnaphost = () => false
 
 export function Navbar() {
+  const scrollTo = useSmoothScroll()
   const isMounted = useSyncExternalStore(
     subscribe,
     getClientSnaphost,
@@ -39,24 +45,28 @@ export function Navbar() {
         <NavigationMenu className="hidden md:flex">
           <NavigationMenuList className="flex gap-8">
             <NavigationMenuItem>
-              <Link href="/about" className="nav-animation-underline">
+              <button
+                onClick={() => scrollTo("#about")}
+                className="nav-animation-underline"
+              >
                 About
-              </Link>
+              </button>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link href="/services" className="nav-animation-underline">
-                Services
-              </Link>
+              <button
+                onClick={() => scrollTo("#benefits")}
+                className="nav-animation-underline"
+              >
+                Why
+              </button>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link href="/pricing" className="nav-animation-underline">
-                Pricing
-              </Link>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <Link href="/contact" className="nav-animation-underline">
+              <button
+                onClick={() => scrollTo("#contacts")}
+                className="nav-animation-underline"
+              >
                 Contact
-              </Link>
+              </button>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <ThemeSwitch />
@@ -77,23 +87,33 @@ export function Navbar() {
             </Button>
           </SheetTrigger>
 
-          <SheetContent title="This is a menu" side="right" className="w-65">
-            <nav className="mt-6 ml-8 flex max-w-[80%] flex-col gap-4">
-              <Link href="/about" className="text-lg font-medium">
-                About
-              </Link>
-              <Link href="/services" className="text-lg font-medium">
-                Services
-              </Link>
-              <Link href="/pricing" className="text-lg font-medium">
-                Pricing
-              </Link>
-              <Link href="/contact" className="text-lg font-medium">
-                Contact
-              </Link>
-              <ThemeSwitch />
+          <SheetContent side="right" className="w-35">
+            <SheetHeader>
+              <SheetTitle className="sr-only">Menu</SheetTitle>
+            </SheetHeader>
 
-              <CtaButton />
+            <nav className="mt-6 ml-8 flex max-w-[80%] flex-col gap-8 text-2xl font-bold">
+              <button
+                onClick={() => scrollTo("#about")}
+                className="nav-animation-underline"
+              >
+                About
+              </button>
+              <button
+                onClick={() => scrollTo("#benefits")}
+                className="nav-animation-underline"
+              >
+                Contact
+              </button>
+              <button
+                onClick={() => scrollTo("#contacts")}
+                className="nav-animation-underline"
+              >
+                Why
+              </button>
+              <div className="flex w-full justify-center">
+                <ThemeSwitch />
+              </div>
             </nav>
           </SheetContent>
         </Sheet>

@@ -26,7 +26,7 @@ export function BenefitsSection() {
   const MyPhoto =
     resolvedTheme == "light" ? BenefitsImageLight : BenefitsImageDark
   return (
-    <div className="justfy-center flex flex-col items-center">
+    <div id="benefits" className="justfy-center flex flex-col items-center">
       <div className="relative flex w-full flex-col items-center">
         <h2 className="heading-h2 relative text-center">Бенефиты.</h2>
         <p className="mt-4 w-full text-center font-bold text-subheader">
