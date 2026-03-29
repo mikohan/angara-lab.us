@@ -44,7 +44,10 @@ export function CallToAction() {
             проекте. Отправляйте резюме и портфолио.
           </p>
           <div className="my-16 flex w-full justify-center">
-            <button className="flex w-60 items-center justify-center gap-4 rounded-full bg-btn-color px-8 py-2">
+            <a
+              href="https://t.me/mishabelkin1"
+              className="btn-animation flex w-60 cursor-pointer items-center justify-center gap-4 rounded-full bg-btn-color px-8 py-2"
+            >
               <Image
                 src={TelegramIcon}
                 alt="Call me icon"
@@ -52,7 +55,7 @@ export function CallToAction() {
                 width={32}
               />
               Contact Me
-            </button>
+            </a>
           </div>
         </div>
         <div className="relative w-full">
