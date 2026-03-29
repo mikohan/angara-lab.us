@@ -34,7 +34,7 @@ export default function HeroRu() {
             </div>
             <div className="min-h-30 leading-normal md:min-h-40">
               <h1 className="text-3xl leading-normal font-bold tracking-normal text-foreground md:text-5xl">
-                Сторю большой бизнес в США. Присоеденяйся!
+                Развиваю бизнес в США. Присоединяйся!
               </h1>
             </div>
             <p className="tracking-tight">

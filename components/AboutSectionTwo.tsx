@@ -17,10 +17,10 @@ export function AboutSectionTwo() {
   return (
     <div id="about" className="justfy-center flex flex-col items-center">
       <h2 className="heading-h2 text-center">
-        Приветстую, меня зовут Владимир.
+        Приветствую, меня зовут Владимир.
       </h2>
       <p className="mt-4 w-full text-center font-bold text-subheader">
-        Я собираю сильную комнду для массштабирования бизнеса в США.
+        Я собираю сильную комaнду для массштабирования бизнеса в США.
       </p>
       <div className="mt-16 md:flex md:justify-between md:gap-8">
         <div className="relative w-full">
@@ -44,8 +44,8 @@ export function AboutSectionTwo() {
           </p>
           <p>
             На этих проектах я хочу создать маркетинговую команду Angara Lab —
-            научиться, построить систему и далее развивать бизнесы разной
-            направленности в США на федеральном уровне.
+            построить систему и далее развивать бизнесы разной направленности в
+            США на федеральном уровне.
           </p>
           <p>
             У нас есть гигантские перспективы для личного роста и развития
