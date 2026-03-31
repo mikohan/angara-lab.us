@@ -52,11 +52,16 @@ export default async function RootLayout({
   params,
 }: Readonly<{
   children: React.ReactNode
-  params: Promise<{ locale: "en" | "ru" }>
+  params: Promise<{ locale: string }>
 }>) {
   const { locale } = await params
   // This will now correctly validate against ['en', 'ru']
-  if (!routing.locales.includes(locale)) {
+  // We cast the array to a string array to allow the .includes(string) check
+  const isSupportedLocale = (routing.locales as readonly string[]).includes(
+    locale
+  )
+
+  if (!isSupportedLocale) {
     notFound()
   }
   const messages = await getMessages()
