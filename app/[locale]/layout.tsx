@@ -1,8 +1,12 @@
 import { Metadata } from "next"
 import LenisProvider from "@/lib/LenisProvider"
-import { blauerNue, geist, inter, roboto } from "./fonts"
+import { NextIntlClientProvider } from "next-intl"
+import { getMessages } from "next-intl/server"
+import { notFound } from "next/navigation"
+import { routing } from "@/i18n/routing"
+import { blauerNue, geist, inter, roboto } from "../fonts"
 
-import "./globals.css"
+import "../globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { cn } from "@/lib/utils"
 import ScrollToTop from "@/components/ScrollToTop"
@@ -43,14 +47,22 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode
+  params: Promise<{ locale: "en" | "ru" }>
 }>) {
+  const { locale } = await params
+  // This will now correctly validate against ['en', 'ru']
+  if (!routing.locales.includes(locale)) {
+    notFound()
+  }
+  const messages = await getMessages()
   return (
     <html
-      lang="en"
+      lang={locale}
       suppressHydrationWarning
       className={cn(
         geist.variable,
@@ -61,11 +73,13 @@ export default function RootLayout({
     >
       <body>
         <LenisProvider>
-          <ThemeProvider>
-            <Navbar />
-            {children}
-            <Footer />
-          </ThemeProvider>
+          <NextIntlClientProvider messages={messages}>
+            <ThemeProvider>
+              <Navbar />
+              {children}
+              <Footer />
+            </ThemeProvider>
+          </NextIntlClientProvider>
           <ScrollToTop />
         </LenisProvider>
       </body>
