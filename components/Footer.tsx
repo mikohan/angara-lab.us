@@ -28,7 +28,7 @@ export function Footer() {
           </Link>
           <Link
             scroll={false}
-            href="https://t.me/mishabelkin1"
+            href={`https://t.me/${process.env.NEXT_PUBLIC_TELEGRAM_LINK}`}
             target="_blank"
             className="flex items-center gap-2"
           >

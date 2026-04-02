@@ -33,7 +33,7 @@ export function CallToAction() {
           <p>{t("skills")}</p>
           <div className="my-16 flex w-full justify-center">
             <a
-              href="https://t.me/mishabelkin1"
+              href={`https://t.me/${process.env.NEXT_PUBLIC_TELEGRAM_LINK}`}
               className="btn-animation flex w-60 cursor-pointer items-center justify-center gap-4 rounded-full bg-btn-color px-8 py-2"
             >
               <Image
