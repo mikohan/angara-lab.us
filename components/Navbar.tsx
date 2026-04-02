@@ -1,4 +1,5 @@
 "use client"
+import Image from "next/image"
 import { useSmoothScroll } from "@/lib/useSmoothScroll"
 import { Menu } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -10,6 +11,8 @@ import {
   SheetHeader,
   SheetTitle,
 } from "@/components/ui/sheet"
+
+import TelegramNegative from "@/public/images/company/telegram-negative.png"
 
 import {
   NavigationMenu,
@@ -49,10 +52,18 @@ export function Navbar() {
           <NavigationMenuList className="flex gap-8">
             <NavigationMenuItem>
               <button
-                onClick={() => scrollTo("#about")}
+                onClick={() => scrollTo("#home")}
                 className="nav-animation-underline"
               >
                 {t("home")}
+              </button>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <button
+                onClick={() => scrollTo("#about")}
+                className="nav-animation-underline"
+              >
+                {t("about")}
               </button>
             </NavigationMenuItem>
             <NavigationMenuItem>
@@ -82,7 +93,7 @@ export function Navbar() {
 
         {/* Desktop CTA */}
         <div className="hidden md:flex">
-          <CtaButton />
+          <p>+1 (951) 224-4109</p>
         </div>
 
         {/* Mobile Menu */}
@@ -98,27 +109,30 @@ export function Navbar() {
               <SheetTitle className="sr-only">Menu</SheetTitle>
             </SheetHeader>
 
-            <nav className="mt-6 ml-8 flex max-w-[80%] flex-col gap-8 text-2xl font-bold">
+            <nav className="mt-6 ml-8 flex max-w-[80%] flex-col gap-16 text-2xl font-bold">
               <button
                 onClick={() => scrollTo("#about")}
                 className="nav-animation-underline"
               >
-                About
+                {t("about")}
               </button>
               <button
                 onClick={() => scrollTo("#benefits")}
                 className="nav-animation-underline"
               >
-                Contact
+                {t("why")}
               </button>
               <button
                 onClick={() => scrollTo("#contacts")}
                 className="nav-animation-underline"
               >
-                Why
+                {t("contact")}
               </button>
               <div className="flex w-full justify-center">
                 <ThemeSwitch />
+              </div>
+              <div className="flex w-full justify-center">
+                <LocaleSelect />
               </div>
             </nav>
           </SheetContent>

@@ -30,14 +30,29 @@ export default function LocaleSelect() {
         defaultValue={params.locale as string}
         onValueChange={handleLanguageChange}
       >
-        <SelectTrigger className="w-20 rounded-lg border-white/10 bg-white/5 backdrop-blur-sm transition-all hover:bg-white/10 focus:ring-1 focus:ring-blue-500/50">
+        <SelectTrigger className="h-12! w-40 rounded-lg border-white/10 bg-white/5 p-2 text-2xl backdrop-blur-sm transition-all hover:bg-white/10 focus:ring-1 focus:ring-blue-500/50 md:h-8! md:w-20 md:text-base">
           <SelectValue placeholder="Language" />
         </SelectTrigger>
-        <SelectContent>
+        <SelectContent className="max-h-75 text-xl">
           <SelectGroup>
-            <SelectItem value="en">Eng</SelectItem>
-            <SelectItem value="ru">Рус</SelectItem>
-            <SelectItem value="es">Es</SelectItem>
+            <SelectItem
+              className="py-4 text-xl md:py-2 md:text-base"
+              value="en"
+            >
+              Eng
+            </SelectItem>
+            <SelectItem
+              className="py-4 text-xl md:py-2 md:text-base"
+              value="ru"
+            >
+              Рус
+            </SelectItem>
+            <SelectItem
+              className="py-4 text-xl md:py-2 md:text-base"
+              value="es"
+            >
+              Es
+            </SelectItem>
           </SelectGroup>
         </SelectContent>
       </Select>

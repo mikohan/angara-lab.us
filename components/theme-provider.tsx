@@ -97,8 +97,8 @@ export function ThemeSwitch() {
       size="icon"
       onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
     >
-      <Sun className="h-6! w-6! scale-100 rotate-0 cursor-pointer transition-all hover:rotate-45 hover:bg-transparent! active:bg-transparent! dark:scale-0 dark:-rotate-45" />
-      <Moon className="absolute h-6! w-6! scale-0 rotate-90 cursor-pointer transition-all duration-200 hover:rotate-45 hover:bg-transparent! dark:scale-100 dark:rotate-0" />
+      <Sun className="h-10! w-10! scale-100 rotate-0 cursor-pointer transition-all hover:rotate-45 hover:bg-transparent! active:bg-transparent! md:h-6! md:w-6! dark:scale-0 dark:-rotate-45" />
+      <Moon className="absolute h-10! w-10! scale-0 rotate-90 cursor-pointer transition-all duration-200 hover:rotate-45 hover:bg-transparent! md:h-6! md:w-6! dark:scale-100 dark:rotate-0" />
       <span className="sr-only">Toggle theme</span>
     </Button>
   )

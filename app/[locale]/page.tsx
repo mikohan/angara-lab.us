@@ -9,7 +9,7 @@ import PageAnimate from "@/components/PageAnimation"
 export default function Page() {
   return (
     <PageAnimate>
-      <div className="container mx-auto mb-32 max-w-7xl px-8">
+      <div id="home" className="container mx-auto mb-32 max-w-7xl px-8">
         <div className="mt-2 md:mt-8">
           <HeroRu />
         </div>

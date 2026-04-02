@@ -5,7 +5,8 @@
   },
   "Navigation": {
     "home": "Главная",
-    "why": "О нас",
+    "about": "О Нас",
+    "why": "Почему мы",
     "contact": "Контакты"
   },
   "HomePage": {
