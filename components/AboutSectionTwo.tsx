@@ -4,8 +4,10 @@ import MyPhotoLight from "@/public/images/company/me-light.jpg"
 import MyPhotoDark from "@/public/images/company/me-dark.jpg"
 import { useTheme } from "next-themes"
 import { useEffect, useState } from "react"
+import { useTranslations } from "next-intl"
 
 export function AboutSectionTwo() {
+  const t = useTranslations("HomePage")
   const { theme, resolvedTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
   useEffect(() => {
@@ -16,11 +18,9 @@ export function AboutSectionTwo() {
   const MyPhoto = resolvedTheme == "light" ? MyPhotoLight : MyPhotoDark
   return (
     <div id="about" className="justfy-center flex flex-col items-center">
-      <h2 className="heading-h2 text-center">
-        Приветствую, меня зовут Владимир.
-      </h2>
+      <h2 className="heading-h2 text-center">{t("aboutH2")}</h2>
       <p className="mt-4 w-full text-center font-bold text-subheader">
-        Я собираю сильную комaнду для массштабирования бизнеса в США.
+        {t("subH2")}
       </p>
       <div className="mt-16 md:flex md:justify-between md:gap-8">
         <div className="relative w-full">
@@ -31,40 +31,24 @@ export function AboutSectionTwo() {
           />
         </div>
         <div className="mt-12 flex flex-col gap-4 font-light md:mt-0 md:gap-8 md:px-16">
-          <p>
-            Привет. Я Владимир, развиваю в США две компании в сфере
-            профессионального клининга (уборка и химчистка мебели). Это
-            классический вороночный бизнес с реальной базой клиентов в
-            Калифорнии.
-          </p>
-          <p>
-            Сейчас мы находимся на этапе перехода от стартапа к бизнесу. Уже
-            зарабатываем деньги на высококонкурентном рынке. Сейчас выручка
-            $200K, нужно выйти на федеральный уровень и массштабировать до $10M.
-          </p>
-          <p>
-            На этих проектах я хочу создать маркетинговую команду Angara Lab —
-            построить систему и далее развивать бизнесы разной направленности в
-            США на федеральном уровне.
-          </p>
-          <p>
-            У нас есть гигантские перспективы для личного роста и развития
-            бизнеса.
-          </p>
-          <p>
-            В чем проблема: У меня есть заказы и поток клиентов, но мне не
-            хватает системности в маркетинге и аналитике. Мне нужны люди,
-            которые умеют строить инфраструктуру, а не просто «запускать
-            рекламу».
-          </p>
-          <p>
-            Мне нужны архитекторы систем. Люди, которые умеют строить
-            инфраструктуру, считать юнит-экономику и
-            <span className="font-semibold text-destructive">
-              {" "}
-              отвечать за результат.
-            </span>
-          </p>
+          {t.rich("aboutText", {
+            // This handles all the <p> tags automatically
+            p: (chunks) => (
+              <p className="mb-6 leading-relaxed last:mb-0">{chunks}</p>
+            ),
+
+            // This handles the highlighted text at the end
+            important: (chunks) => (
+              <span className="font-semibold whitespace-nowrap text-destructive">
+                {chunks}
+              </span>
+            ),
+
+            // If you prefer to keep the tag as <span> in your JSON, use this key instead:
+            span: (chunks) => (
+              <span className="font-semibold text-destructive">{chunks}</span>
+            ),
+          })}
         </div>
       </div>
     </div>

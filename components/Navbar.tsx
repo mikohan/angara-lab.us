@@ -19,12 +19,15 @@ import {
 import { ThemeSwitch } from "./theme-provider"
 import { Logo } from "./Logo"
 import { useSyncExternalStore } from "react"
+import LocaleSelect from "./LocaleSelect"
+import { useTranslations } from "next-intl"
 
 const subscribe = () => () => {}
 const getClientSnaphost = () => true
 const getServerSnaphost = () => false
 
 export function Navbar() {
+  const t = useTranslations("Navigation")
   const scrollTo = useSmoothScroll()
   const isMounted = useSyncExternalStore(
     subscribe,
@@ -49,7 +52,7 @@ export function Navbar() {
                 onClick={() => scrollTo("#about")}
                 className="nav-animation-underline"
               >
-                About
+                {t("home")}
               </button>
             </NavigationMenuItem>
             <NavigationMenuItem>
@@ -57,7 +60,7 @@ export function Navbar() {
                 onClick={() => scrollTo("#benefits")}
                 className="nav-animation-underline"
               >
-                Why
+                {t("why")}
               </button>
             </NavigationMenuItem>
             <NavigationMenuItem>
@@ -65,11 +68,14 @@ export function Navbar() {
                 onClick={() => scrollTo("#contacts")}
                 className="nav-animation-underline"
               >
-                Contact
+                {t("contact")}
               </button>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <ThemeSwitch />
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <LocaleSelect />
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>

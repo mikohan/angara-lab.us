@@ -5,5 +5,5 @@ export default createMiddleware(routing)
 
 export const config = {
   // Updated matcher to include 'ru'
-  matcher: ["/", "/(ru|en)/:path*", "/((?!api|_next|_vercel|.*\\..*).*)"],
+  matcher: ["/", "/(ru|en|es)/:path*", "/((?!api|_next|_vercel|.*\\..*).*)"],
 }

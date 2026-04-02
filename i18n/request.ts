@@ -2,19 +2,22 @@ import { getRequestConfig } from "next-intl/server"
 import { routing } from "./routing"
 
 export default getRequestConfig(async ({ requestLocale }) => {
-  let locale = await requestLocale
+  const locale = await requestLocale
 
-  // Validate that the locale is supported
-  if (!locale || !routing.locales.includes(locale as "en" | "ru")) {
-    locale = routing.defaultLocale
+  // 1. Define a strict type based on your actual locales array
+  type Locale = (typeof routing.locales)[number]
+
+  // 2. Validate without using 'any'
+  if (!locale || !routing.locales.includes(locale as Locale)) {
+    return {
+      locale: routing.defaultLocale,
+      messages: (await import(`../app/messages/${routing.defaultLocale}.json`))
+        .default,
+    }
   }
 
   return {
-    locale,
-    // Using a more explicit import pattern for Turbopack
-    messages: (locale === "ru"
-      ? await import("../app/messages/ru.json")
-      : await import("../app/messages/en.json")
-    ).default,
+    locale: locale as Locale, // Now TS knows this is exactly "en", "ru", or "es"
+    messages: (await import(`../app/messages/${locale}.json`)).default,
   }
 })

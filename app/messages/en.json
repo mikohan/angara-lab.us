@@ -1,5 +1,31 @@
 {
+  "Buttons": {
+    "hero": "Join my team",
+    "video": "Watch Video"
+  },
+
+  "Navigation": {
+    "home": "Home",
+    "why": "Why",
+    "contact": "Contact"
+  },
   "HomePage": {
-    "title": "Hello world!"
+    "title": "Hire marketers from over the world!",
+    "h1": "Scaling Business in USA: $200K to 10M.",
+    "sub": "I offer: a progressive compensation. Salary in USD. Relocation Possibility. Stable Future and Financial Security.",
+    "market": "$842 Billion Market",
+
+    "aboutH2": "Greetings, my name is Vladimir.",
+    "subH2": "I am building a strong team to scale businesses in the USA.",
+    "aboutText": "<p>Hi. I am Vladimir, and I'm developing two professional cleaning companies in the US (residential cleaning and furniture upholstery). This is a classic funnel-based business with a real client base in California.</p><p>We are currently in the transition phase from a startup to an established business. We are already generating revenue in a highly competitive market. Our current revenue is $200K, and we need to reach the federal level and scale to $10M.</p><p>Through these projects, I want to create the Angara Lab marketing team—to build a system and then develop various types of businesses in the US on a federal scale.</p><p>We have massive opportunities for personal growth and business development.</p><p>The challenge: I have the orders and the client flow, but I lack systematic structure in marketing and analytics. I need people who know how to build infrastructure, not just run ads.</p><p>I need system architects. People who know how to build infrastructure, calculate unit economics, and <span>take responsibility for the results.</span></p>",
+    "benefitsh2": "Benefits",
+    "benefits_sub": "A few benefits you can gain through successful collaboration.",
+    "income_dollar": "Income in US Dollars",
+    "progressive_payment": "Progressive payment system",
+    "relocation_help": "Relocation assistance",
+    "long_partnership": "Long-term partnership",
+    "remote_work": "Remote work format",
+    "american_market": "Experience with the US market",
+    "american_portfolio": "US-based cases for your portfolio"
   }
 }

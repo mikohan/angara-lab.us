@@ -2,7 +2,10 @@ import Image from "next/image"
 import MarketShareIcon from "@/public/images/company/market-share.svg"
 import VideoIcon from "@/public/images/company/video.svg"
 import { HeroButton } from "./HeroButton"
+import { useTranslations } from "next-intl"
+
 export default function Hero() {
+  const t = useTranslations("HomePage")
   return (
     <section>
       {/* Container for all left text and buttons */}

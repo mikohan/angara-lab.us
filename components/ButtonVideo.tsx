@@ -1,7 +1,9 @@
 import Image from "next/image"
 import VideoIcon from "@/public/images/company/video.svg"
+import { useTranslations } from "next-intl"
 
 export function ButtonVideo() {
+  const t = useTranslations("Buttons")
   return (
     <div className="btn-animation inline-flex cursor-pointer items-center gap-2">
       <button
@@ -17,7 +19,7 @@ export function ButtonVideo() {
         />
       </button>
 
-      <p className="text-sm md:text-base">Watch Video</p>
+      <p className="text-sm md:text-base">{t("video")}</p>
     </div>
   )
 }

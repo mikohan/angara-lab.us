@@ -1,0 +1,30 @@
+{
+  "Buttons": {
+    "hero": "Join my team",
+    "video": "Watch Video"
+  },
+  "Navigation": {
+    "home": "Inicio",
+    "why": "Nosotros",
+    "contact": "Contacto"
+  },
+  "HomePage": {
+    "title": "Hire marketers from over the world!",
+    "h1": "Scaling Business in USA: $200K to 10M.",
+    "sub": "I offer: a progressive compensation. Salary in USD. Relocation Possibility. Stable Future and Financial Security.",
+    "market": "$842 Billion Market",
+
+    "aboutH2": "Saludos, mi nombre es Vladimir.",
+    "subH2": "Estoy formando un equipo sólido para escalar negocios en los EE. UU.",
+    "aboutText": "<p>Hola. Soy Vladimir y estoy desarrollando dos empresas de limpieza profesional en EE. UU. (limpieza residencial y de tapicería). Este es un negocio clásico basado en embudos con una base real de clientes en California.</p><p>Actualmente estamos en la fase de transición de startup a empresa consolidada. Ya estamos generando ingresos en un mercado altamente competitivo. Nuestra facturación actual es de $200K, y necesitamos alcanzar el nivel federal y escalar hasta los $10M.</p><p>A través de estos proyectos, quiero crear el equipo de marketing de Angara Lab: construir un sistema y luego desarrollar diversos tipos de negocios en EE. UU. a escala federal.</p><p>Tenemos oportunidades gigantescas para el crecimiento personal y el desarrollo de negocios.</p><p>El desafío: Tengo los pedidos y el flujo de clientes, pero me falta sistemática en el marketing y la analítica. Necesito personas que sepan construir infraestructura, no solo 'lanzar anuncios'.</p><p>Necesito arquitectos de sistemas. Personas que sepan construir infraestructura, calcular la rentabilidad por unidad (unit economics) y <span>hacerse responsables de los resultados.</span></p>",
+    "benefitsh2": "Beneficios",
+    "benefits_sub": "Algunos beneficios que puedes obtener mediante una colaboración exitosa.",
+    "income_dollar": "Ingresos en dólares estadounidenses",
+    "progressive_payment": "Sistema de pago progresivo",
+    "relocation_help": "Asistencia de relocalización",
+    "long_partnership": "Colaboración a largo plazo",
+    "remote_work": "Formato de trabajo remoto",
+    "american_market": "Trabajo en el mercado estadounidense",
+    "american_portfolio": "Casos de éxito en EE. UU. para tu portafolio"
+  }
+}

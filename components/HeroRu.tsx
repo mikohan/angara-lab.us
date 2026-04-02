@@ -5,8 +5,10 @@ import { HeroButton } from "./HeroButton"
 import { ButtonVideo } from "./ButtonVideo"
 import HeroImageDark from "@/public/images/company/hero-dark.png"
 import HeroImageLight from "@/public/images/company/hero-light.png"
+import { useTranslations } from "next-intl"
 
 export default function HeroRu() {
+  const t = useTranslations("HomePage")
   const show_video = process.env.NEXT_PUBLIC_VIDEO_ENABLED === "true"
   return (
     <section className="w-full">
@@ -24,7 +26,7 @@ export default function HeroRu() {
                 alt="Market Share"
               />
             </div>
-            <p className="font-base">$842 Billion Market in USA</p>
+            <p className="font-base">{t("market")}</p>
           </div>
           {/* header and subheader box */}
           <div className="mt-4 flex flex-col gap-8">
@@ -34,13 +36,10 @@ export default function HeroRu() {
             </div>
             <div className="min-h-30 leading-normal md:min-h-40">
               <h1 className="text-3xl leading-normal font-bold tracking-normal text-foreground md:text-5xl">
-                Развиваю бизнес в США. Присоединяйся!
+                {t("h1")}
               </h1>
             </div>
-            <p className="tracking-tight">
-              Ищу профессионалов в <b>команду</b> маркетинга для
-              массштабирования бизнеса в <b>США</b> с $200k до $10M.
-            </p>
+            <p className="tracking-tight">{t("sub")}</p>
           </div>
           {/* Buttons box */}
           <div className="mt-16 flex flex-row items-center gap-8 md:mt-44">

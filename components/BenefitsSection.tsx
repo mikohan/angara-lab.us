@@ -13,9 +13,10 @@ import {
   Globe,
   FileBarChart,
 } from "lucide-react"
-;<BadgeDollarSign className="text-blue-500" strokeWidth={1.5} />
+import { useTranslations } from "next-intl"
 
 export function BenefitsSection() {
+  const t = useTranslations("HomePage")
   const { theme, resolvedTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
   useEffect(() => {
@@ -28,10 +29,9 @@ export function BenefitsSection() {
   return (
     <div id="benefits" className="justfy-center flex flex-col items-center">
       <div className="relative flex w-full flex-col items-center">
-        <h2 className="heading-h2 relative text-center">Бенефиты.</h2>
+        <h2 className="heading-h2 relative text-center">{t("benefitsh2")}</h2>
         <p className="mt-4 w-full text-center font-bold text-subheader">
-          Несколько бенефитов, которые Вы можете получить при успешном
-          сотрудничестве.
+          {t("benefits_sub")}
         </p>
         <div className="absolute top-0 left-0 -z-20 h-20 w-full bg-top-blur blur-2xl"></div>
       </div>
@@ -41,43 +41,43 @@ export function BenefitsSection() {
             <div>
               <BadgeDollarSign />
             </div>
-            <div>Доход в долларах</div>
+            <div>{t("income_dollar")}</div>
           </li>
           <li className="flex items-center gap-4">
             <div>
               <BarChart3 />
             </div>
-            <div>Прогрессивная система оплаты</div>
+            <div>{t("progressive_payment")}</div>
           </li>
           <li className="flex items-center gap-4">
             <div>
               <Plane />
             </div>
-            <div>Помощь с релокацией</div>
+            <div>{t("relocation_help")}</div>
           </li>
           <li className="flex items-center gap-4">
             <div>
               <Handshake />
             </div>
-            <div>Долгосрочное сотрудничество</div>
+            <div>{t("long_partnership")}</div>
           </li>
           <li className="flex items-center gap-4">
             <div>
               <Home />
             </div>
-            <div>Удалённый формат работы</div>
+            <div>{t("remote_work")}</div>
           </li>
           <li className="flex items-center gap-4">
             <div>
               <Globe />
             </div>
-            <div>Работа с американским рынком</div>
+            <div>{t("american_market")}</div>
           </li>
           <li className="flex items-center gap-4">
             <div>
               <FileBarChart />
             </div>
-            <div>Американские кейсы в портфолио</div>
+            <div>{t("american_portfolio")}</div>
           </li>
         </ul>
         <div className="relative mt-16 w-full md:mt-0 md:max-w-[40%]">
