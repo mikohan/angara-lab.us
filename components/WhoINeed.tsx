@@ -5,8 +5,10 @@ import MyPhotoDark from "@/public/images/company/me-dark.jpg"
 import { useTheme } from "next-themes"
 import { useEffect, useState } from "react"
 import { BriefcaseBusiness, Handshake } from "lucide-react"
+import { useTranslations } from "next-intl"
 
 export function WhoINeed() {
+  const t = useTranslations("HomePage")
   const { theme, resolvedTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
   useEffect(() => {
@@ -17,10 +19,9 @@ export function WhoINeed() {
   const MyPhoto = resolvedTheme == "light" ? MyPhotoLight : MyPhotoDark
   return (
     <div className="justfy-center flex flex-col items-center">
-      <h2 className="heading-h2 text-center">Кто нужен.</h2>
+      <h2 className="heading-h2 text-center">{t("who_i_need")}</h2>
       <p className="mt-4 w-full max-w-[80%] text-center font-bold text-subheader">
-        Я ищу профессионалов, понмающих, что результат - это следствие процесса,
-        а не подвига.
+        {t("who_i_need_sub")}
       </p>
       <div className="mt-16 md:flex md:gap-8">
         <div className="relative w-full">
@@ -31,36 +32,14 @@ export function WhoINeed() {
           />
         </div>
         <div className="mt-12 flex flex-col gap-4 font-light md:mt-0 md:max-w-[60%] md:gap-8 md:px-16">
-          <h3 className="heading-h3">Что нужно будет делать:</h3>
-          <p>
-            Строить архитектуру: Сквозная аналитика, связки между трафиком и
-            CRM, полная автоматизация пути клиента. Сложные воронки. Считать
-            показатели: Вы должны знать стоимость лида, конверсию каждого этапа
-            и четко видеть, где мы теряем деньги. Управлять эффективностью:
-            Самостоятельно находить узкие места, предлагать решения и внедрять
-            их.
-          </p>
-          <h3 className="heading-h3">
-            Я ищу людей в долгую, поэтому к отбору подхожу осознанно. Мне важна
-            совместимость подходов и ценностей.
-          </h3>
-          <p>
-            Я ищy не просто исполнителя, а профессионала, который готов усилить
-            бизнес и развиваться внутри него. Если вам интересно строить
-            серьезную системную архитектуру — давайте пообщаемся.
-          </p>
-          <h3 className="heading-h3">Процесс выглядит так:</h3>
+          <h3 className="heading-h3">{t("what_to_do")}</h3>
+          <p>{t("architecture")}</p>
+          <h3 className="heading-h3">{t("long_term")}</h3>
+          <p>{t("looking_for")}</p>
+          <h3 className="heading-h3">{t("process")}</h3>
           <ul className="flex flex-col gap-4">
-            <li className="flex items-start gap-4">
-              <Handshake className="shrink-0 text-blur-bg-3" />
-              Знакомство. Короткий созвон, чтобы синхронизироваться по видению и
-              целям.
-            </li>
-            <li className="flex items-start gap-4">
-              <BriefcaseBusiness className="shrink-0 text-blur-bg-3" />
-              Технический разбор. Глубокое интервью, где мы обсудим логику
-              построения систем и работу.
-            </li>
+            <li className="flex items-start gap-4">{t("meeting")}</li>
+            <li className="flex items-start gap-4">{t("detailed")}</li>
           </ul>
         </div>
       </div>

@@ -26,6 +26,23 @@
     "long_partnership": "Long-term partnership",
     "remote_work": "Remote work format",
     "american_market": "Experience with the US market",
-    "american_portfolio": "US-based cases for your portfolio"
+    "american_portfolio": "US-based cases for your portfolio",
+    "who_i_need": "Who I am looking for.",
+    "who_i_need_sub": "I am looking for professionals who understand that results are a consequence of a process, not a heroic feat.",
+    "what_to_do": "What needs to be done:",
+    "architecture": "Build the architecture: End-to-end analytics, connections between traffic and CRM, full automation of the customer journey. Complex funnels. Track metrics: You must know the cost per lead, the conversion rate of every stage, and clearly see where we are losing money. Manage efficiency: Independently identify bottlenecks, propose solutions, and implement them.",
+    "long_term": "I am looking for long-term partners, so I approach selection intentionally. Alignment in approaches and values is essential to me.",
+    "looking_for": "I am not just looking for an executor, but a professional ready to strengthen the business and grow within it. If you are interested in building serious systemic architecture—let's talk.",
+    "process": "The process looks like this:",
+    "meeting": "Introduction. A short call to align on vision and goals.",
+    "detailed": "Technical breakdown. A deep interview where we discuss the logic of system building and workflow.",
+    "are_you_ready": "Are you ready to build business architecture, rather than just 'closing tasks'?",
+    "are_you_ready_sub": "We are starting with specific tasks in the US real-sector business, but the goal is to create a massive, autonomous system with exponential growth.",
+    "what_to_do_now": "What to do now:",
+    "contact_me": "If interested, message: {telegram}. Briefly: what you can do 'hands-on' and what minimum fixed rate you need right now to live and work comfortably.",
+    "what_next": "What's next:",
+    "what_next2": "If you see the potential for a long-term partnership—message on Telegram {telegram}.",
+    "skills": "Briefly: your experience, key 'hands-on' competencies, and a comfortable starting fixed rate that allows you to focus entirely on the project. Send your resume and portfolio.",
+    "contact_me_button": "Contact Me"
   }
 }

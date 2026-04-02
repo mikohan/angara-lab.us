@@ -25,6 +25,23 @@
     "long_partnership": "Colaboración a largo plazo",
     "remote_work": "Formato de trabajo remoto",
     "american_market": "Trabajo en el mercado estadounidense",
-    "american_portfolio": "Casos de éxito en EE. UU. para tu portafolio"
+    "american_portfolio": "Casos de éxito en EE. UU. para tu portafolio",
+    "who_i_need": "A quién busco.",
+    "who_i_need_sub": "Busco profesionales que entiendan que el resultado es consecuencia del proceso, no de un acto heroico.",
+    "what_to_do": "Qué tendrás que hacer:",
+    "architecture": "Construir la arquitectura: Analítica completa (end-to-end), integraciones entre tráfico y CRM, automatización total del viaje del cliente. Embudos complejos. Calcular indicadores: Debes conocer el costo por lead, la conversión de cada etapa y ver claramente dónde estamos perdiendo dinero. Gestionar la eficiencia: Identificar cuellos de botella de forma autónoma, proponer soluciones e implementarlas.",
+    "long_term": "Busco personas a largo plazo, por lo que abordo la selección de manera consciente. Para mí es vital la compatibilidad de enfoques y valores.",
+    "looking_for": "No busco un simple ejecutor, sino un profesional dispuesto a fortalecer el negocio y desarrollarse dentro de él. Si te interesa construir una arquitectura de sistemas seria, hablemos.",
+    "process": "El proceso es el siguiente:",
+    "meeting": "Introducción. Una llamada corta para sincronizarnos en visión y objetivos.",
+    "detailed": "Análisis técnico. Una entrevista profunda donde discutiremos la lógica de construcción de sistemas y el trabajo.",
+    "are_you_ready": "¿Estás listo para construir arquitectura de negocios en lugar de solo 'cerrar tareas'?",
+    "are_you_ready_sub": "Comenzamos con tareas específicas en el sector real de negocios en EE. UU., pero el objetivo es la creación de un sistema masivo y autónomo con un crecimiento exponencial.",
+    "what_to_do_now": "Qué hacer ahora:",
+    "contact_me": "Si te interesa, escribe a: {telegram}. Brevemente: qué sabes hacer 'con las manos' y qué pago fijo mínimo necesitas ahora para vivir y trabajar tranquilo.",
+    "what_next": "Próximos pasos:",
+    "what_next2": "Si ves potencial en una alianza a largo plazo, escribe por Telegram a {telegram}.",
+    "skills": "Resumen: tu experiencia, competencias clave técnicas y el pago fijo inicial que te permita enfocarte totalmente en el proyecto. Envía tu CV y portafolio.",
+    "contact_me_button": "Contácteme"
   }
 }
