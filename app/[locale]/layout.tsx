@@ -12,7 +12,7 @@ import { cn } from "@/lib/utils"
 import ScrollToTop from "@/components/ScrollToTop"
 import { Footer } from "@/components/Footer"
 import { Navbar } from "@/components/Navbar"
-
+import { GoogleTagManager } from "@next/third-parties/google"
 const ogUrl =
   process.env.NEXT_PUBLIC_WEBSITE + "/images/company/hero-dark.png" ||
   "https://angara-lab.us/images/company/hero-dark.png"
@@ -76,6 +76,7 @@ export default async function RootLayout({
         roboto.variable
       )}
     >
+      <GoogleTagManager gtmId="GTM-KSG58TR5" />
       <body>
         <LenisProvider>
           <NextIntlClientProvider messages={messages}>
