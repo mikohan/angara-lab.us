@@ -1,6 +1,15 @@
 /** @type {import('next').NextConfig} */
-import createNextIntlPlugin from "next-intl/plugin"
-const withNextIntl = createNextIntlPlugin()
-const nextConfig = {}
+const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+        port: "",
+        pathname: "/**", // Allows any image path from their CDN
+      },
+    ],
+  },
+}
 
-export default withNextIntl(nextConfig)
+export default nextConfig

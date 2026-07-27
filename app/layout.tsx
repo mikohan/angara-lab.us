@@ -1,21 +1,17 @@
 import { Metadata } from "next"
 import LenisProvider from "@/lib/LenisProvider"
-import { NextIntlClientProvider } from "next-intl"
-import { getMessages } from "next-intl/server"
-import { notFound } from "next/navigation"
-import { routing } from "@/i18n/routing"
-import { blauerNue, geist, inter, roboto } from "../fonts"
-
-import "../globals.css"
+import { blauerNue, geist, inter, roboto } from "./fonts" // Update this path if you moved layout.tsx
+import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { cn } from "@/lib/utils"
 import ScrollToTop from "@/components/ScrollToTop"
 import { Footer } from "@/components/Footer"
 import { Navbar } from "@/components/Navbar"
 import { GoogleTagManager } from "@next/third-parties/google"
+
 const ogUrl =
   process.env.NEXT_PUBLIC_WEBSITE + "/images/company/hero-dark.png" ||
-  "https://angara-lab.us/images/company/hero-dark.png"
+  "https://angara-lab.us"
 
 export const metadata: Metadata = {
   title: "Join Angara Lab — Build a Marketing System for a $10M Vision",
@@ -35,7 +31,7 @@ export const metadata: Metadata = {
         alt: "Angara Lab — Marketing Team Hiring",
       },
     ],
-    locale: "en_US",
+    locale: "ru_RU", // Updated to Russian locale context since your layout lang is "ru"
     type: "website",
   },
   twitter: {
@@ -47,27 +43,14 @@ export const metadata: Metadata = {
   },
 }
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
-  params,
 }: Readonly<{
   children: React.ReactNode
-  params: Promise<{ locale: string }>
 }>) {
-  const { locale } = await params
-  // This will now correctly validate against ['en', 'ru']
-  // We cast the array to a string array to allow the .includes(string) check
-  const isSupportedLocale = (routing.locales as readonly string[]).includes(
-    locale
-  )
-
-  if (!isSupportedLocale) {
-    notFound()
-  }
-  const messages = await getMessages()
   return (
     <html
-      lang={locale}
+      lang="ru"
       suppressHydrationWarning
       className={cn(
         geist.variable,
@@ -79,13 +62,11 @@ export default async function RootLayout({
       <GoogleTagManager gtmId="GTM-KSG58TR5" />
       <body>
         <LenisProvider>
-          <NextIntlClientProvider messages={messages}>
-            <ThemeProvider>
-              <Navbar />
-              {children}
-              <Footer />
-            </ThemeProvider>
-          </NextIntlClientProvider>
+          <ThemeProvider>
+            <Navbar />
+            {children}
+            <Footer />
+          </ThemeProvider>
           <ScrollToTop />
         </LenisProvider>
       </body>
