@@ -17,13 +17,13 @@ export default function Page() {
           <PerksBar />
         </div>
         {/* Section about-start */}
-        <div className="mt-16 md:mt-32">
+        <div id="about" className="mt-16 md:mt-32">
           <AboutSectionTwo />
         </div>
-        <div className="mt-16 md:mt-32">
+        <div id="benefits" className="mt-16 md:mt-32">
           <BenefitsSection />
         </div>
-        <div className="mt-16 md:mt-32">
+        <div id="vacancies" className="mt-16 md:mt-32">
           <WhoINeed />
         </div>
         <div className="mt-16 md:mt-32">

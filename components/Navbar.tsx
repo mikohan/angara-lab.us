@@ -26,6 +26,12 @@ import { useSyncExternalStore } from "react"
 const subscribe = () => () => {}
 const getClientSnaphost = () => true
 const getServerSnaphost = () => false
+const links = [
+  { link: "/", text: "Главная" },
+  { link: "/careers", text: "Вакансии" },
+  { link: "/contacts", text: "Контакты" },
+  { link: "/blog", text: "Блог" },
+]
 
 export function Navbar() {
   const scrollTo = useSmoothScroll()
@@ -51,44 +57,13 @@ export function Navbar() {
         {/* Desktop Menu */}
         <NavigationMenu className="hidden md:flex">
           <NavigationMenuList className="flex items-center gap-8">
-            <NavigationMenuItem>
-              <button
-                onClick={() => scrollTo("#home")}
-                className="nav-animation-underline"
-              >
-                Главная
-              </button>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <button
-                onClick={() => scrollTo("#about")}
-                className="nav-animation-underline"
-              >
-                О нас
-              </button>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <button
-                onClick={() => scrollTo("#benefits")}
-                className="nav-animation-underline"
-              >
-                Преимущества
-              </button>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <button
-                onClick={() => scrollTo("#contacts")}
-                className="nav-animation-underline"
-              >
-                Контакты
-              </button>
-            </NavigationMenuItem>
-
-            <NavigationMenuItem>
-              <Link className="nav-animation-underline block" href="/blog">
-                Блог
-              </Link>
-            </NavigationMenuItem>
+            {links.map((l, i) => (
+              <NavigationMenuItem key={i}>
+                <Link href={l.link} className="nav-animation-underline">
+                  {l.text}
+                </Link>
+              </NavigationMenuItem>
+            ))}
             <NavigationMenuItem>
               <ThemeSwitch />
             </NavigationMenuItem>
