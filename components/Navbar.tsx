@@ -86,34 +86,16 @@ export function Navbar() {
             <SheetHeader>
               <SheetTitle className="sr-only">Меню</SheetTitle>
             </SheetHeader>
-            <nav className="mt-6 flex flex-col gap-6 text-xl font-semibold">
-              <button
-                onClick={() => scrollTo("#home")}
-                className="nav-animation-underline text-left"
-              >
-                Главная
-              </button>
-              <button
-                onClick={() => scrollTo("#about")}
-                className="nav-animation-underline text-left"
-              >
-                О нас
-              </button>
-              <button
-                onClick={() => scrollTo("#benefits")}
-                className="nav-animation-underline text-left"
-              >
-                Преимущества
-              </button>
-              <button
-                onClick={() => scrollTo("#contacts")}
-                className="nav-animation-underline text-left"
-              >
-                Контакты
-              </button>
-              <Link href="/blog" className="nav-animation-underline text-left">
-                Блог
-              </Link>
+            <nav className="mt-6 flex flex-col gap-6 pl-8 text-xl font-semibold">
+              {links.map((l, i) => (
+                <Link
+                  key={i}
+                  href={l.link}
+                  className="nav-animation-underline text-left"
+                >
+                  {l.text}
+                </Link>
+              ))}
               <div className="mt-4 flex w-full items-center justify-start gap-4 border-t pt-4">
                 <span className="text-sm text-muted-foreground">Тема:</span>
                 <ThemeSwitch />
