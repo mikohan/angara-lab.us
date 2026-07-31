@@ -57,18 +57,6 @@ export function Compensation() {
             часть корректируется. Это редкие, но понятные шаги, которые заранее
             согласуются и закрепляются.
           </p>
-
-          <ul className="flex flex-col gap-4">
-            <li className="flex items-start gap-4">
-              <span className="font-semibold">•</span>
-              Первая ознакомительная встреча для обсуждения вашего опыта и наших
-              задач.
-            </li>
-            <li className="flex items-start gap-4">
-              <span className="font-semibold">•</span>
-              Детальный разбор кейсов и условий совместной работы.
-            </li>
-          </ul>
         </div>
       </div>
     </div>
