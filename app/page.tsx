@@ -3,7 +3,7 @@ import { BenefitsSection } from "@/components/BenefitsSection"
 import { CallToAction } from "@/components/CallToAction"
 import HeroRu from "@/components/HeroRu"
 import { PerksBar } from "@/components/PerksBar"
-import { WhoINeed } from "@/components/WhoINeed"
+import { Compensation } from "@/components/Compensation"
 import PageAnimate from "@/components/PageAnimation"
 
 export default function Page() {
@@ -24,7 +24,7 @@ export default function Page() {
           <BenefitsSection />
         </div>
         <div id="vacancies" className="mt-16 md:mt-32">
-          <WhoINeed />
+          <Compensation />
         </div>
         <div className="mt-16 md:mt-32">
           <CallToAction />
