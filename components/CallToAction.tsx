@@ -1,76 +1,71 @@
-"use client"
+// components/CareersCTA.tsx
+import Link from "next/link"
 
-import Image from "next/image"
-import SamLight from "@/public/images/company/sam-light.jpg"
-import SamDark from "@/public/images/company/sam-dark.jpg"
-import TelegramIcon from "@/public/images/company/telegram-negative.png"
+type CareersCTAProps = {
+  className?: string
+}
 
-export function CallToAction() {
-  const telegram = process.env.NEXT_PUBLIC_TELEGRAM ?? "@mishabelkin1"
-  const telegramLink = process.env.NEXT_PUBLIC_TELEGRAM_LINK ?? "mishabelkin1"
+export function CTA({ className = "" }: CareersCTAProps) {
+  const telegramLink =
+    process.env.NEXT_PUBLIC_TELEGRAM_LINK || "vladusabusiness"
 
   return (
-    <div id="contacts" className="flex flex-col items-center justify-center">
-      <h2 className="heading-h2 text-center">
-        Готовы работать в системе, которая растёт?
-      </h2>
-      <p className="mt-4 w-full max-w-[80%] text-center font-bold text-subheader">
-        Если вы хотите расти вместе с нами и строить сильные международные
-        проекты — свяжитесь со мной напрямую
-      </p>
+    <section className={`relative py-20 sm:py-24 ${className}`}>
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="relative overflow-hidden rounded-3xl border border-border bg-card px-6 py-14 text-center sm:px-10 sm:py-16">
+          {/* soft background glow */}
+          <div className="pointer-events-none absolute inset-0 overflow-hidden">
+            <div className="absolute -top-24 left-1/2 h-64 w-64 -translate-x-1/2 rounded-full bg-btn-color/10 blur-3xl" />
+          </div>
 
-      <div className="mt-16 w-full items-center md:flex md:gap-8">
-        <div className="mt-12 flex flex-col gap-4 font-light md:mt-0 md:w-1/2 md:gap-8 md:px-16">
-          <p>
-            Angara Lab строит операционную модель, способную масштабироваться до
-            нескольких локаций и выйти на выручку $10M в год. Мы двигаемся
-            быстро, работаем по понятным стандартам и создаём среду, где
-            результат зависит от качества решений, а не от хаоса.
-          </p>
+          <div className="relative mx-auto max-w-2xl">
+            <p className="mb-3 text-sm font-semibold tracking-widest text-btn-color uppercase">
+              08 — CTA
+            </p>
 
-          <p>
-            Если тебе близок структурный подход, ясные задачи и работа, которая
-            напрямую влияет на развитие проектов — посмотри открытые роли и
-            выбери ту, где твои навыки дадут максимальный эффект.
-          </p>
-          <p>
-            Отправь резюме в Telegram. Если профиль подойдёт под текущие задачи
-            — я свяжусь. Если нет, добавлю в базу и вернусь к тебе, когда
-            появится подходящая роль.
-          </p>
+            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+              Готов работать в системе, которая растёт?
+            </h2>
 
-          <div className="my-16 flex w-full justify-center">
-            <a
-              href={`https://t.me/${telegramLink}`}
-              className="btn-animation flex w-60 cursor-pointer items-center justify-center gap-4 rounded-full bg-btn-color px-8 py-2 font-medium text-white"
-            >
-              <Image
-                src={TelegramIcon}
-                alt="Иконка Telegram"
-                height={32}
-                width={32}
-              />
-              Написать мне
-            </a>
+            <p className="mt-5 text-base leading-relaxed text-muted-foreground sm:text-lg">
+              Если тебе близок структурный подход, ясные задачи и работа,
+              которая напрямую влияет на развитие проектов — посмотри открытые
+              роли и выбери ту, где твои навыки дадут максимальный эффект.
+            </p>
+
+            <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
+              Отправь резюме в Telegram. Если профиль подойдёт под текущие
+              задачи — я свяжусь. Если нет — добавлю в базу и вернусь, когда
+              появится подходящая роль.
+            </p>
+
+            <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <a
+                href={`https://t.me/${telegramLink}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full bg-btn-color px-8 py-3.5 text-sm font-semibold text-primary-foreground transition hover:opacity-90"
+              >
+                Написать в Telegram
+                <svg
+                  className="h-4 w-4"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
+                </svg>
+              </a>
+
+              <Link
+                href="/careers"
+                className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-8 py-3.5 text-sm font-semibold text-foreground transition hover:bg-muted"
+              >
+                Смотреть роли
+              </Link>
+            </div>
           </div>
         </div>
-
-        <div className="relative w-full md:w-1/2 md:max-w-[45%]">
-          {/* Native Dark Mode Optimization: Prevents layout flashing on initial client mount */}
-          <Image
-            className="block rounded-2xl object-cover dark:hidden"
-            src={SamLight}
-            alt="Фото основателя Сэма"
-            priority
-          />
-          <Image
-            className="hidden rounded-2xl object-cover dark:block"
-            src={SamDark}
-            alt="Фото основателя Сэма"
-            priority
-          />
-        </div>
       </div>
-    </div>
+    </section>
   )
 }

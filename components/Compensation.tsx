@@ -1,64 +1,73 @@
-"use client"
-
+// components/Compensation.tsx
 import Image from "next/image"
-import MyPhotoLight from "@/public/images/company/me-light.jpg"
-import MyPhotoDark from "@/public/images/company/me-dark.jpg"
-import { useTheme } from "next-themes"
 
-export function Compensation() {
-  const { resolvedTheme } = useTheme()
+type CompensationProps = {
+  className?: string
+}
 
-  const MyPhoto = resolvedTheme === "light" ? MyPhotoLight : MyPhotoDark
-
+export function Compensation({ className = "" }: CompensationProps) {
   return (
-    <div className="flex flex-col items-center justify-center">
-      <h2 className="heading-h2 text-center">Компенсация</h2>
-      <p className="mt-4 w-full max-w-[80%] text-center font-medium text-subheader">
-        В Angara Lab компенсация состоит из двух элементов:{" "}
-        <span className="text-foreground">фиксированной</span> части и{" "}
-        <span className="text-foreground">гибкой</span> части.
-      </p>
-
-      <div className="mt-16 md:flex md:gap-8">
-        <div className="relative w-full">
-          <Image
-            className="rounded-2xl object-cover"
-            src={MyPhoto}
-            alt="Фото основателя"
-            priority
-          />
+    <section className={`relative py-20 sm:py-24 ${className}`}>
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="mx-auto mb-14 max-w-2xl text-center">
+          <p className="mb-3 text-sm font-semibold tracking-widest text-btn-color uppercase">
+            06 — Compensation
+          </p>
+          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+            Компенсация
+          </h2>
+          <p className="mt-4 text-lg text-muted-foreground">
+            Прозрачная модель: фиксированная часть + гибкий бонус.
+          </p>
         </div>
 
-        <div className="mt-12 flex flex-col gap-4 font-light md:mt-0 md:max-w-[60%] md:gap-8 md:px-16">
-          <p>
-            В Angara Lab компенсация состоит из двух элементов: фиксированной
-            части и гибкой части. Фиксированная часть — это оплата за выполнение
-            недельного плана работы. У каждой роли есть понятный набор
-            обязательных результатов, и при полном выполнении плана человек
-            получает свою ставку. Это стабильная основа, которая создаёт
-            предсказуемость и прозрачность.
-          </p>
+        {/* Image + text */}
+        <div className="mx-auto grid max-w-5xl items-center gap-10 lg:grid-cols-2 lg:gap-16">
+          {/* Image */}
+          <div className="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden rounded-2xl border border-border lg:max-w-none">
+            <Image
+              src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=2070&auto=format&fit=crop"
+              alt="Compensation and growth"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
+          </div>
 
-          <p>
-            Мы ищем людей в команду на долгий срок с возможностью роста до
-            ключевых позиций и управления направлениями.
-          </p>
-          <p>
-            Гибкая часть — это бонус за выполнение месячного плана. Он заранее
-            определён и привязан к ключевым показателям роли. Если показатели
-            удержаны на нужном уровне, бонус автоматически включается в выплату.
-            Система простая: есть план, есть результат, есть заранее известная
-            сумма
-          </p>
-          <p>
-            Рост компенсации происходит тогда, когда зона ответственности
-            расширяется. Если специалист берёт на себя новую функцию, которая
-            делает процессы устойчивее и улучшает работу команды, фиксированная
-            часть корректируется. Это редкие, но понятные шаги, которые заранее
-            согласуются и закрепляются.
-          </p>
+          {/* Single text block */}
+          <div className="space-y-6 text-muted-foreground">
+            <p className="leading-relaxed">
+              Компенсация состоит из двух элементов: фиксированной части и
+              гибкой части.
+            </p>
+
+            <p className="leading-relaxed">
+              <span className="font-medium text-foreground">
+                Фиксированная часть
+              </span>{" "}
+              — оплата за выполнение недельного плана. У каждой роли есть
+              понятный набор обязательных результатов. При полном выполнении
+              плана человек получает ставку. Это стабильная основа, которая
+              создаёт предсказуемость.
+            </p>
+
+            <p className="leading-relaxed">
+              <span className="font-medium text-foreground">Гибкая часть</span>{" "}
+              — бонус за выполнение месячного плана. Он заранее определён и
+              привязан к ключевым показателям роли. Если показатели удержаны на
+              нужном уровне, бонус включается автоматически.
+            </p>
+
+            <p className="leading-relaxed text-foreground">
+              Рост компенсации происходит тогда, когда зона ответственности
+              расширяется. Если специалист берёт на себя новую функцию, которая
+              делает процессы устойчивее и улучшает работу команды,
+              фиксированная часть корректируется.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }

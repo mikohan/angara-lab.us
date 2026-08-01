@@ -231,7 +231,7 @@ export default function CareersPage() {
             </p>
             <div className="mt-8">
               <Link
-                href="mailto:careers@example.com"
+                href={`mailto:${process.env.NEXT_PUBLIC_COMPANY_EMAIL}`}
                 className="inline-flex items-center gap-2 rounded-full bg-btn-color px-8 py-3 text-sm font-semibold text-primary-foreground transition hover:opacity-90"
               >
                 Send open application

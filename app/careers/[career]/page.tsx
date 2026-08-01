@@ -14,6 +14,7 @@ export default async function VacancyPage({
 }) {
   const { career } = await params
   const vacancy = vacancies.find((v) => v.slug === career)
+  const button = vacancy ? vacancy.formUrl : "Отправить отклик"
 
   if (!vacancy) {
     notFound()
@@ -184,26 +185,47 @@ export default async function VacancyPage({
                   Пришлите резюме и несколько слов о себе. Мы ответим в течение
                   нескольких дней.
                 </p>
-
-                <a
-                  href={`mailto:careers@example.com?subject=Отклик на вакансию: ${vacancy.title}`}
-                  className="flex w-full items-center justify-center gap-2 rounded-full bg-btn-color px-6 py-3 text-sm font-semibold text-primary-foreground transition hover:opacity-90"
-                >
-                  Отправить отклик
-                  <svg
-                    className="h-4 w-4"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
+                {button ? (
+                  <a
+                    href={button}
+                    className="flex w-full items-center justify-center gap-2 rounded-full bg-btn-color px-6 py-3 text-sm font-semibold text-primary-foreground transition hover:opacity-90"
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                    />
-                  </svg>
-                </a>
+                    Заполните форму
+                    <svg
+                      className="h-4 w-4"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                      />
+                    </svg>
+                  </a>
+                ) : (
+                  <a
+                    href={`mailto:${process.env.NEXT_PUBLIC_COMPANY_EMAIL}?subject=Отклик на вакансию: ${vacancy.title}`}
+                    className="flex w-full items-center justify-center gap-2 rounded-full bg-btn-color px-6 py-3 text-sm font-semibold text-primary-foreground transition hover:opacity-90"
+                  >
+                    Отправить резюме
+                    <svg
+                      className="h-4 w-4"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                      />
+                    </svg>
+                  </a>
+                )}
 
                 <div className="mt-6 space-y-3 border-t border-border pt-6 text-sm">
                   <div className="flex justify-between">

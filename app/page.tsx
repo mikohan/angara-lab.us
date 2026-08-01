@@ -1,10 +1,15 @@
 import { AboutSectionTwo } from "@/components/AboutSectionTwo"
 import { BenefitsSection } from "@/components/BenefitsSection"
-import { CallToAction } from "@/components/CallToAction"
+import { CTA } from "@/components/CallToAction"
 import HeroRu from "@/components/HeroRu"
 import { PerksBar } from "@/components/PerksBar"
 import { Compensation } from "@/components/Compensation"
 import PageAnimate from "@/components/PageAnimation"
+import { MarketContext } from "@/components/MarketContext"
+import { WorkPrinciples } from "@/components/WorkPrinciples"
+import { OpenRoles } from "@/components/OpenRoles"
+import { HiringProcess } from "@/components/HiringProcess"
+import { CareerCTA } from "@/components/CareerCTA"
 
 export default function Page() {
   return (
@@ -17,17 +22,26 @@ export default function Page() {
           <PerksBar />
         </div>
         {/* Section about-start */}
-        <div id="about" className="mt-16 md:mt-32">
+        <div>
+          <MarketContext />
+        </div>
+        <div id="about">
           <AboutSectionTwo />
         </div>
-        <div id="benefits" className="mt-16 md:mt-32">
-          <BenefitsSection />
+        <div>
+          <WorkPrinciples />
         </div>
-        <div id="vacancies" className="mt-16 md:mt-32">
+        <div>
+          <OpenRoles />
+        </div>
+        <div id="vacancies">
           <Compensation />
         </div>
-        <div className="mt-16 md:mt-32">
-          <CallToAction />
+        <div>
+          <HiringProcess />
+        </div>
+        <div>
+          <CareerCTA />
         </div>
       </div>
     </PageAnimate>
